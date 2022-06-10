@@ -34,11 +34,6 @@ const Navbar = () => {
             Sign Up
           </NavLink>
         </NavMenu>
-        <NavMenu>
-        <NavLink to="/special" activeStyle>
-            special
-          </NavLink>
-        </NavMenu>
         <NavBtn>
           <NavBtnLink to="/signin">Sign In</NavBtnLink>
         </NavBtn>
