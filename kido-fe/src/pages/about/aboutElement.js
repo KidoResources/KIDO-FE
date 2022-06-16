@@ -30,9 +30,10 @@ export const Div = styled.div`
 export const Title = styled.div`
     display: flex;
     justify-content: center;
+    background-color: ${({bg}) => bg || 'black'};
 
     h1{
-        color: orange;
+        color: black;
     }
 `;
 
@@ -57,17 +58,39 @@ export const HeroImage = styled.img`
     margin: 1%;
 `;
 
-export const TeamDiv = styled.div`
-    color:brown;
+export const Flex = styled.div`
     display: flex;
-    justify-content: center;
+    align-items: center;
+    background-color: ${({bg}) => bg || 'black'};
+    padding: 20px 20px;
+
+    div{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        align-items:center;
+        width: 100%;
+        padding: 10px 50px;
+    }
+    h1{
+        padding-left: 10px;
+    }
+    p{
+        padding: 10px 0px;
+    }
 `
-export const TName = styled.div`
-    color: white;
-`
-export const Tinfo = styled.div`
-    color: white;
-`
-export const Timg = styled.img`
-    color: white;
+
+export const Button = styled.button`
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    background-color:${({bg}) => bg || 'black'};;
+    color: ${({color}) => color || 'orange'};
+    padding: 12px 50px;
+
+    &:hover{
+        opacity:0.9;
+        transform: scale(0.98)
+    }
 `
