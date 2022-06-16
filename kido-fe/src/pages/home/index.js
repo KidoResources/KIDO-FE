@@ -1,6 +1,10 @@
 import React from "react";
 // import content from "./content";
 import { Button, Container, Flex, Image, StyledCard } from "./homeElements";
+import {ReactComponent as Chat} from './images/Chat.svg';
+import {ReactComponent as WorkingTogether} from './images/WorkTogether.svg';
+import {ReactComponent as Explore} from './images/explore.svg';
+import {ReactComponent as Conversation} from './images/conversation.svg';
 
 const Home = () => {
   return (
@@ -19,10 +23,7 @@ const Home = () => {
             Get Started for Free
           </Button>
         </div>
-        <Image
-          src="./images/WorkTogether.svg"
-          alt="Working together on project image"
-        />
+        < WorkingTogether /> {/*img*/}
       </Flex>
       <Container>
         <StyledCard>
@@ -35,7 +36,7 @@ const Home = () => {
             </p>
           </div>
           <div>
-            <img src="./images./Chat.svg" />
+            <Conversation />
           </div>
         </StyledCard>
         <StyledCard>
@@ -47,9 +48,9 @@ const Home = () => {
               flow.
             </p>
           </div>
-          <div>
-            <img src="./images./Chat.svg" />
-          </div>
+          <Image>
+            <Chat /> {/*img*/}
+          </Image>
         </StyledCard>
         <StyledCard>
           <div>
@@ -63,7 +64,7 @@ const Home = () => {
             </p>
           </div>
           <div>
-            <img src="./images./Chat.svg" />
+            <Explore/>
           </div>
         </StyledCard>
       </Container>
