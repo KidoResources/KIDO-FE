@@ -37,10 +37,15 @@ export const Flex = styled.div`
 `
 
 export const Image = styled.image`
-    width:90%;
-    max-width:100%
+  display:flex;
+  flex-wrap: wrap;
+  width:80%;
+  max-width:100%
 `
 export const Container= styled.div`
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     width: 1000px;
     max-width: 100%;
     padding: 0 20px;
@@ -48,23 +53,21 @@ export const Container= styled.div`
 `
 export const StyledCard = styled.div`
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   background-color: #fff;
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   margin: 40px 0;
   padding: 60px;
-  flex-direction: ${({ layout }) => layout || 'row'};
-
-  img {
-    width: 80%;
-  }
+  flex-direction: row;
 
   & > div {
-    flex: 1;
+    flex: 30;
   }
 
-  @media (max-width: ${({ theme }) => theme.mobile}) {
+  @media (max-width:375px}) {
     flex-direction: column;
   }
 `
